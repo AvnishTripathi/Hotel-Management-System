@@ -7,7 +7,21 @@
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-An enterprise-grade, full-stack **Hotel Management & Online Booking System** featuring a 5-star luxury guest booking portal, multi-method payment gateway (Card, UPI, NetBanking, Pay at Hotel), official GST tax invoice generation, and a comprehensive staff operations management dashboard.
+An enterprise-grade, full-stack **Hotel Management & Online Booking System** featuring a 5-star luxury guest booking portal, multi-method payment gateway (Cards, UPI QR, NetBanking, Pay at Hotel), official GST tax invoice generation, and a comprehensive staff operations management dashboard.
+
+---
+
+## 📸 Home Page & Suite Previews
+
+<div align="center">
+  <img src="screenshots/home-hero.jpg" alt="Royal Grand Hotel Home Page Hero Banner" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);" />
+</div>
+
+<br />
+
+| Luxury Suites & Accommodations | World-Class Amenities & Infinity Pool |
+| :---: | :---: |
+| <img src="screenshots/deluxe-suite.jpg" alt="Deluxe Suite" width="100%" style="border-radius: 8px;" /> | <img src="screenshots/amenities-pool.jpg" alt="Infinity Pool" width="100%" style="border-radius: 8px;" /> |
 
 ---
 
@@ -92,6 +106,10 @@ npm run dev
 ├── requirements.txt                # Python backend dependencies
 ├── .env.example                    # Environment variable template
 ├── DEPLOYMENT.md                   # Production deployment guide
+├── screenshots/                    # Showcase screenshots & hero banners
+│   ├── home-hero.jpg
+│   ├── deluxe-suite.jpg
+│   └── amenities-pool.jpg
 ├── hotel_management_api/           # Modular REST API endpoints
 │   ├── view.py                     # Route registrations
 │   ├── login_api.py / register_api.py
