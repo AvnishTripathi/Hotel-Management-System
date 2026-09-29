@@ -85,6 +85,37 @@ def home():
         "message": "Hotel Management API Running Successfully 🚀"
     }
 
+
+@app.route("/health")
+def health():
+    from utils.connection import get_connection
+    conn = get_connection()
+    if conn:
+        try:
+            cursor = conn.cursor()
+            cursor.execute("SELECT 1")
+            cursor.fetchall()
+            cursor.close()
+            conn.close()
+            return {
+                "status": "healthy",
+                "database": "connected",
+                "message": "Database connection is active and verified ✅"
+            }, 200
+        except Exception as e:
+            return {
+                "status": "degraded",
+                "database": "error",
+                "error": str(e)
+            }, 500
+    else:
+        return {
+            "status": "unhealthy",
+            "database": "disconnected",
+            "message": "Could not connect to database. Check DB_HOST, DB_USER, DB_PASSWORD, DB_PORT, DB_NAME environment variables."
+        }, 500
+
+
 # RUN SERVER
 
 
